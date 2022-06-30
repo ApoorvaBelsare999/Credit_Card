@@ -15,8 +15,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-loaded_model=pickle.load(open(r'C:\Users\user\Downloads\trained_model.sav','rb'))
-scaler=pickle.load(open(r'C:\Users\user\Downloads\scaler.sav','rb'))
+loaded_model=pickle.load(open(r'trained_model.sav','rb'))
+scaler=pickle.load(open(r'scaler.sav','rb'))
 
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
@@ -47,8 +47,8 @@ def func_csv(input):
     
 def main():
     
-    image = Image.open(r'C:\Users\user\Downloads\credit-card.jpg')
-    logo = Image.open(r'C:\Users\user\Downloads\1590390848_Aress logo_mid.png')
+    image = Image.open(r'credit_card_image.jpg')
+    logo = Image.open(r'aress_logo.jpg')
     
     col1,col2  = st.columns(2)
     
