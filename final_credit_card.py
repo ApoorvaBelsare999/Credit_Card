@@ -64,10 +64,9 @@ def main():
         st.image(logo,width=250,use_column_width=True)
         
         st.markdown("# Main page 🎈")
-        st.sidebar.markdown("# Main page 🎈")
-    
-         
-    
+        st.markdown("# Page 2 ❄️")
+          
+   
     LIMIT_BAL = st.text_input('Limit Balance Available')
     PAY_0 = st.text_input('pay_0')
     PAY_2 = st.text_input('pay_2')
