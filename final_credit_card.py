@@ -48,7 +48,7 @@ def func_csv(input):
 def main():
     
     image = Image.open('credit-card.jpg')
-    logo = Image.open('Aress logo_mid.png')
+    logo  = Image.open('Aress logo_mid.png')
     
     col1,col2  = st.columns(2)
     
