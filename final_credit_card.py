@@ -62,7 +62,7 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
-        st.markdown(st.selectbox,"# Main page 🎈")
+        st.markdown("# Main page 🎈")
         st.markdown("# Page 2 ❄️")
         
    
