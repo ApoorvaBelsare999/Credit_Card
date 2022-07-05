@@ -5,6 +5,13 @@ Created on Mon Jun 27 15:10:30 2022
 @author: user
 """
 
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jun 27 15:10:30 2022
+
+@author: user
+"""
+
 import pickle
 import numpy as np 
 import streamlit as st
@@ -15,9 +22,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-loaded_model=pickle.load(open('trained_model.sav','rb'))
-scaler=pickle.load(open('scaler.sav','rb'))
-data = pd.read_csv("default of credit card clients.csv")
+loaded_model=pickle.load(open(r'trained_model.sav','rb'))
+scaler=pickle.load(open(r'scaler.sav','rb'))
+
+
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
  
@@ -45,10 +53,10 @@ def func_csv(input):
     else:
         return'person will default'
     
-
-
-    image = Image.open(r'credit_card_image.jpg')
-    logo = Image.open(r'aress_logo.jpg')
+def main():
+    
+    image = Image.open('credit-card.jpg')
+    logo = Image.open('Aress logo_mid.png')
     
     col1,col2  = st.columns(2)
     
@@ -62,7 +70,7 @@ def func_csv(input):
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
-    st.write(data)
+        
          
     
     LIMIT_BAL = st.text_input('Limit Balance Available')
@@ -96,7 +104,7 @@ def func_csv(input):
         pass
     
     st.info('You can upload the file for prediction')
-   
+    
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
     if uploaded_file is not None:
      try:
@@ -127,13 +135,13 @@ def func_csv(input):
      except:
          st.success('CSV file does not match with required columns')
          
-    #try:
-        #html_string = "<div class='tableauPlaceholder' id='viz1656509306208' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PO&#47;POCTableauAnalysisupdates&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='POCTableauAnalysisupdates&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PO&#47;POCTableauAnalysisupdates&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1656509306208');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"
-       # st.sidebar.write(f'''<a target="_self" href="https://public.tableau.com/app/profile/ram3105/viz/POCTableauAnalysisupdates/Dashboard1?publish=yes"><button>Dashboard 1 </button></a>''',unsafe_allow_html=True)
-        #st.sidebar.write(html_string, unsafe_allow_html=True)
+    try:
+        html_string = "<div class='tableauPlaceholder' id='viz1656509306208' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PO&#47;POCTableauAnalysisupdates&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='POCTableauAnalysisupdates&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;PO&#47;POCTableauAnalysisupdates&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1656509306208');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>"
+        st.sidebar.write(f'''<a target="_self" href="https://public.tableau.com/app/profile/ram3105/viz/POCTableauAnalysisupdates/Dashboard1?publish=yes"><button>Dashboard 1 </button></a>''',unsafe_allow_html=True)
+        st.sidebar.write(html_string, unsafe_allow_html=True)
 
-    #except:
-        #st.write("problem with the tableau link")
+    except:
+        st.write("problem with the tableau link")
     
        
 if __name__== '__main__':
