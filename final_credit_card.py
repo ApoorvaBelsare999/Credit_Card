@@ -63,7 +63,7 @@ def main():
     
         st.image(logo,width=250,use_column_width=True)
         
-    data=
+    
          
     
     LIMIT_BAL = st.text_input('Limit Balance Available')
