@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 
 loaded_model=pickle.load(open('trained_model.sav','rb'))
 scaler=pickle.load(open('scaler.sav','rb'))
-
+data = pd.read_csv("default of credit card clients.csv")
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
  
@@ -62,6 +62,7 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
+    st.write(data)
          
     
     LIMIT_BAL = st.text_input('Limit Balance Available')
