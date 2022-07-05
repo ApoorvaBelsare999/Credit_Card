@@ -67,8 +67,8 @@ def main():
                #"App1": app1,
                #"App2": app2
             #    }
-        page = st.selectbox("Choose your page", ["Main","Data") 
-        selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+        page = st.selectbox("Choose your page", ["Main","Data"]) 
+        #selection = st.sidebar.radio("Go to", list(PAGES.keys()))
 
         #page.app()
        # if page == "Page 1":
