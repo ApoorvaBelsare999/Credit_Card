@@ -17,6 +17,7 @@ warnings.filterwarnings('ignore')
 
 loaded_model=pickle.load(open(r'trained_model.sav','rb'))
 scaler=pickle.load(open(r'scaler.sav','rb'))
+data=pd.read_csv("default of credit card clients")
 
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
@@ -63,8 +64,9 @@ def main():
     
         st.image(logo,width=250,use_column_width=True)
         page = st.selectbox("Choose your page", ["Page 1", "Page 2", "Page 3"]) 
-        #if page == "Page 1":
-           # Display details of page 1
+        if page == "Page 1":
+          st.write(data)
+         #Display details of page 1
         #elif page == "Page 2":
            # Display details of page 2
         #elif page == "Page 3":
