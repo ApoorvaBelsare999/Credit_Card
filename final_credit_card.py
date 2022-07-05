@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 
 loaded_model=pickle.load(open(r'trained_model.sav','rb'))
 scaler=pickle.load(open(r'scaler.sav','rb'))
-data=pd.read_csv("default of credit card clients")
+data=pd.read_csv("default of credit card clients.csv")
 
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
