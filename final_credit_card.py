@@ -63,9 +63,16 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
-        page = st.selectbox("Choose your page", ["Page 1", "Page 2", "Page 3"]) 
-        if page == "Page 1":
-          st.write(data)
+        PAGES = {
+               "App1": app1,
+               "App2": app2
+                }
+        page = st.selectbox("Choose your page", PAGES.keys()) 
+        selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+        page = PAGES[selection]
+        #page.app()
+       # if page == "Page 1":
+          #st.write(data)
          #Display details of page 1
         #elif page == "Page 2":
            # Display details of page 2
