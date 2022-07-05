@@ -63,13 +63,13 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
-        PAGES = {
-               "App1": app1,
-               "App2": app2
-                }
-        page = st.selectbox("Choose your page", PAGES.keys()) 
+        #PAGES = {
+               #"App1": app1,
+               #"App2": app2
+            #    }
+        page = st.selectbox("Choose your page", ["Main","Data") 
         selection = st.sidebar.radio("Go to", list(PAGES.keys()))
-        page = PAGES[selection]
+
         #page.app()
        # if page == "Page 1":
           #st.write(data)
