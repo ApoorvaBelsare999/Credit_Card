@@ -62,10 +62,9 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
-        
-        st.markdown("# Main page 🎈")
-        st.markdown("# Page 2 ❄️")
-          
+        main=st.markdown("# Main page 🎈")
+        data=st.markdown("# Page 2 ❄️")
+        selected_page = st.sidebar.selectbox("Select a page",[main,data])
    
     LIMIT_BAL = st.text_input('Limit Balance Available')
     PAY_0 = st.text_input('pay_0')
