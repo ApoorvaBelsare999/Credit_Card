@@ -63,6 +63,8 @@ def main():
     
         st.image(logo,width=250,use_column_width=True)
         
+        st.markdown("# Main page 🎈")
+        st.sidebar.markdown("# Main page 🎈")
     
          
     
@@ -128,7 +130,7 @@ def main():
      except:
          st.success('CSV file does not match with required columns')
          
-    
+     
     
        
 if __name__== '__main__':
