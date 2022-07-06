@@ -88,7 +88,7 @@ def main():
         
             Payment =''
             if st.button('Please click for prediction'):
-                Payment = func([LIMIT_BAL,PAY_0,PAY_2,PAY_3,PAY_4,PAY_5,PAY_6,BILL_AMT5,PAY_AMT2])
+                Payment = func([LIMIT_BAL,PAY_0,PAY_2,PAY_3,PAY_4,PAY_5,PAY_6,BILL_AMT5,BILL_AMT5])
                 with st.spinner('Wait for it...'):
                     time.sleep(5)
                     st.success(Payment)
@@ -104,7 +104,9 @@ def main():
         pass
     
     st.info('You can upload the file for prediction')
-   
+    with open('Sample.csv') as f:
+        st.download_button('Download CSV', f)
+    
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
     if uploaded_file is not None:
      try:
