@@ -135,7 +135,7 @@ def main():
                 except:
                     df = df
                 csv = convert_df(df)
-                st.download_button(label="Download File With the prediction as CSV",data=csv,file_name='File With the prediction.csv',mime='text/csv')  
+                st.download_button(label="You can download Sample csv to upload",data=csv,file_name='Sample.csv',mime='text/csv')  
                 st.success("Prediction for the file is done")
                 st.snow()             
      except:
