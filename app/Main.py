@@ -22,7 +22,7 @@ st.set_page_config(
 
 
 
-loaded_model=pickle.load(open('xgb_model.sav','rb'))
+loaded_model=pickle.load(open('trained_model .sav','rb'))
 scaler=pickle.load(open('scaler.sav','rb'))
 
 def convert_df(df):
