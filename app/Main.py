@@ -95,7 +95,7 @@ def main():
                     if Payment=='This person will not default':
                         st.snow()
                     else:
-                        st.image('better_luck.jpg")
+                        st.image('better_luck.jpg')
 
         else:
             st.write("please enter all values")
