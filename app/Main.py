@@ -74,14 +74,15 @@ def main():
          
     
     LIMIT_BAL = st.text_input('Limit Balance Available')
-    PAY_0 = st.text_input('pay_0')
-    PAY_2 = st.text_input('pay_2')
-    PAY_3 = st.text_input('pay_3')
-    PAY_4 = st.text_input('pay_4')
-    PAY_5 = st.text_input('pay_5')
-    PAY_6 = st.text_input('pay_6')
-    BILL_AMT5 = st.text_input('Bill_Amount_5')
-    PAY_AMT2 = st.text_input('pay_amount_2')
+    st.write('1=pay duly, 1=payment delay for one month, 2=payment delay for two months, … 8=payment delay for eight months, 9=payment delay for nine months and above')
+    PAY_0 = st.text_input('Repayment status for last month')
+    PAY_2 = st.text_input('Repayment status - 2 months back')
+    PAY_3 = st.text_input('Repayment status - 3 months back')
+    PAY_4 = st.text_input('Repayment status - 4 months back')
+    PAY_5 = st.text_input('Repayment status - 5 months back')
+    PAY_6 = st.text_input('Repayment status - 6 months back')
+    BILL_AMT5 = st.text_input('Amount of bill statement - 5 months before')
+    PAY_AMT2 = st.text_input('Amount of previous payment -2 months before')
     
     try:
         if LIMIT_BAL and PAY_0 and PAY_2 and PAY_3 and PAY_4 and PAY_5 and PAY_6 and BILL_AMT5 and PAY_AMT2!=[]:
