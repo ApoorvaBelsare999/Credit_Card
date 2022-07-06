@@ -104,7 +104,17 @@ def main():
         pass
     
     st.info('You can upload the file for prediction')
-    st.download_button(label="Sample CSV",data=Sample,file_name='Sample.csv',mime='text/csv')  
+    
+    df=pd.read_csv('Sample.csv')
+    csv = convert_df(df)
+
+    st.download_button(
+       "Press to Download",
+       csv,
+       "Sample.csv",
+       "text/csv",
+       key='download-csv'
+     )
 
     
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
