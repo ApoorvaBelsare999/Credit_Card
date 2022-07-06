@@ -74,7 +74,6 @@ def main():
          
     
     LIMIT_BAL = st.text_input('Limit Balance Available')
-    st.write('1=pay duly, 1=payment delay for one month, 2=payment delay for two months, … 8=payment delay for eight months, 9=payment delay for nine months and above')
     PAY_0 = st.text_input('Repayment status for last month')
     PAY_2 = st.text_input('Repayment status - 2 months back')
     PAY_3 = st.text_input('Repayment status - 3 months back')
