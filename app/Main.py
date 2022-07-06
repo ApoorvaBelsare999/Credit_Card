@@ -105,7 +105,7 @@ def main():
     
     st.info('You can upload the file for prediction')
     
-    df=pd.read_csv('Credit_Card/app/Sample.csv')
+    df=
     csv = convert_df(df)
 
     st.download_button(
