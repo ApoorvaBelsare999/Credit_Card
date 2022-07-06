@@ -22,8 +22,8 @@ st.set_page_config(
 
 
 
-loaded_model=pickle.load(open(r'C:\Users\user\Downloads\trained_model.sav','rb'))
-scaler=pickle.load(open(r'C:\Users\user\Downloads\scaler.sav','rb'))
+loaded_model=pickle.load(open('trained_model.sav','rb'))
+scaler=pickle.load(open('scaler.sav','rb'))
 
 def convert_df(df):
      return df.to_csv(index = False).encode('utf-8')
@@ -54,8 +54,8 @@ def func_csv(input):
     
 def main():
     
-    image = Image.open(r'C:\Users\user\Downloads\credit_card_image.jpg')
-    logo = Image.open(r'C:\Users\user\Downloads\aress_logo.jpg')
+    image = Image.open('credit_card_image.jpg')
+    logo = Image.open('aress_logo.jpg')
     
     col1,col2  = st.columns(2)
     
@@ -95,7 +95,7 @@ def main():
                     if Payment=='This person will not default':
                         st.snow()
                     else:
-                        st.image(r"C:\Users\user\Downloads\better_luck.jpg")
+                        st.image('better_luck.jpg")
 
         else:
             st.write("please enter all values")
