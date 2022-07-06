@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import altair as alt
+import streamlit.components.v1 as components
 from urllib.error import URLError
 
 st.set_page_config(page_title="Visualization", page_icon="📈")
