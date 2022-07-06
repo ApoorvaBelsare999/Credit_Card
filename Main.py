@@ -106,8 +106,9 @@ def main():
     st.info('You can upload the file for prediction')
    
    
-    with open('Sample.csv') as f:
-        st.download_button('Download CSV', f)
+    df = pd.DataFrame(columns=['LIMIT_BAL','PAY_0','PAY_2','PAY_3','PAY_4','PAY_5','PAY_6','BILL_AMT5','PAY_AMT2'])
+    csv = convert_df(df)
+                st.download_button(label="Download File With the prediction as CSV",data=csv,file_name='File With the prediction.csv',mime='text/csv')
     
     
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
