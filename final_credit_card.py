@@ -64,11 +64,11 @@ def main():
     
         st.image(logo,width=250,use_column_width=True)
      
-        st.set_page_config(
-        page_title="Hello",
-        page_icon="👋")
+        #st.set_page_config(
+       # page_title="Hello",
+        #page_icon="👋")
 
-    st.write("# Welcome to Streamlit! 👋")
+    #st.write("# Welcome to Streamlit! 👋")
 
 #st.sidebar.success("Select a demo above.")
         #PAGES = {
