@@ -104,7 +104,7 @@ def main():
         pass
     
     st.info('You can upload the file for prediction')
-    st.download_button(label="Sample CSV",data=csv,file_name='Sample.csv',mime='text/csv')  
+    st.download_button(label="Sample CSV",data=Sample,file_name='Sample.csv',mime='text/csv')  
 
     
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
