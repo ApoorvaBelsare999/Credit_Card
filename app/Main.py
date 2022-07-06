@@ -107,7 +107,9 @@ def main():
     
     df = pd.DataFrame(columns=['LIMIT_BAL','PAY_0','PAY_2','PAY_3','PAY_4','PAY_5','PAY_6','BILL_AMT5','PAY_AMT2'])
     csv = convert_df(df)
-    st.download_button(label="Download File With the prediction as CSV",data=csv,file_name='File With the prediction.csv',mime='text/csv')
+    st.download_button(label="You can download sample file to be uploaded",data=csv,file_name='Sample.csv',mime='text/csv')
+    
+   
     
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
     if uploaded_file is not None:
