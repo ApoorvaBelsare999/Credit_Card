@@ -105,6 +105,11 @@ def main():
     
     st.info('You can upload the file for prediction')
    
+   
+    with open('Sample.csv') as f:
+        st.download_button('Download CSV', f)
+    
+    
     uploaded_file = st.file_uploader("Choose a csv file for making prediction")
     if uploaded_file is not None:
      try:
