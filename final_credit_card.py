@@ -63,11 +63,19 @@ def main():
     with st.sidebar:
     
         st.image(logo,width=250,use_column_width=True)
+     
+        st.set_page_config(
+        page_title="Hello",
+        page_icon="👋")
+
+    st.write("# Welcome to Streamlit! 👋")
+
+#st.sidebar.success("Select a demo above.")
         #PAGES = {
                #"App1": app1,
                #"App2": app2
             #    }
-        page = st.selectbox("Choose your page", ["Main","Data"]) 
+        #page = st.selectbox("Choose your page", ["Main","Data"]) 
         #selection = st.sidebar.radio("Go to", list(PAGES.keys()))
 
         #page.app()
